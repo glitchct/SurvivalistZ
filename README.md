@@ -1,5 +1,10 @@
-<img width="400" height="400" alt="szlogo" src="https://github.com/user-attachments/assets/6aa18414-6ba5-4bcd-a747-dbd699ce342f" />                           
-                                    
+<img width="400" height="400" alt="szlogo" src="https://github.com/user-attachments/assets/6aa18414-6ba5-4bcd-a747-dbd699ce342f" />    
+
+---                                   
+> [!NOTE]
+> We will try getting SurvivalistZ uploaded on Modrinth.                         
+> But there will be some mods missing, which are from CurseForge.
+
 
 # SurvivalistZ
 
