@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SurvivalistZ – Zombie Minecraft Modpack</title>
+<meta name="description" content="SurvivalistZ is a zombie modpack with over 100 mods for Minecraft 1.20.1 on Forge. Find a cure before you turn.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --void:#070505; --bone:#e8dfd0; --ash:#a39a90; --rust:#3b1613; --blood:#8f0f14; --red:#e11d24; --btn:#b3121a;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{min-height:100%;scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0;min-height:100%;color:var(--bone);
+  background:var(--void) radial-gradient(ellipse 80% 60% at 50% 0%,rgba(143,15,20,.38),transparent 70%) no-repeat;
+  font:400 1.08rem/1.75 "Special Elite","Courier New",monospace;
+  position:relative;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.16;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+body::after{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.8) 100%);
+}
+.page{position:relative;z-index:1}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+.title-row{display:flex;justify-content:space-between;align-items:center;gap:28px 40px;flex-wrap:wrap}
+.notice{flex:0 1 290px;border-left:4px solid var(--blood);background:rgba(0,0,0,.4);padding:16px 18px;font-size:.98rem}
+.notice strong{display:block;color:var(--red);font-weight:400;font-size:1.15rem;margin-bottom:4px}
+nav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:20px 0 0;position:relative}
+.brand{font-size:1.3rem;text-decoration:none;letter-spacing:.06em;text-shadow:0 2px 0 #000}
+nav .links{display:flex;gap:22px;font-size:.95rem}
+nav .links a{color:var(--ash);text-decoration:none}
+nav .links a:hover{color:var(--bone);text-decoration:underline wavy var(--red)}
+.hero{padding:70px 0 40px}
+h1{
+  font:400 clamp(3.4rem,15vw,9.5rem)/.92 "Rubik Wet Paint","Special Elite",Impact,sans-serif;
+  color:var(--red);margin:0;max-width:9ch;text-shadow:0 0 28px rgba(225,29,36,.5);
+  animation:flick 3s 1;
+}
+@keyframes flick{0%,100%{opacity:1}6%{opacity:0}8%{opacity:1}12%{opacity:.15}14%{opacity:1}44%{opacity:1}46%{opacity:.2}48%{opacity:1}}
+.lede{font-size:1.25rem;max-width:50ch;color:var(--bone);margin:30px 0 10px}
+.sig{color:var(--ash);margin:0 0 32px}
+.redact{background:#000;color:#000;padding:0 .35em;border:1px solid #2a2a2a;transition:color .3s}
+.redact:hover{color:var(--bone)}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;font:inherit;text-decoration:none;color:var(--bone);border:2px solid var(--bone);border-radius:2px;background:transparent}
+.btn.solid{background:var(--btn);border-color:var(--btn);box-shadow:0 0 22px rgba(225,29,36,.35)}
+.btn.soon{border-style:dashed;border-color:var(--ash);color:var(--ash)}
+.btn:hover{background:var(--bone);color:var(--void);border-color:var(--bone);border-style:solid}
+section{padding:60px 0}
+h2{font:400 clamp(1.9rem,5vw,2.9rem)/1.1 "Special Elite","Courier New",monospace;margin:0 0 28px;letter-spacing:.03em}
+.hazard{height:14px;background:repeating-linear-gradient(-45deg,var(--red) 0 16px,#0a0707 16px 32px)}
+.warn{padding:26px 0;border-bottom:1px solid var(--rust)}
+.warn h3{margin:0 0 8px;font-size:1.5rem;font-weight:400;color:var(--red)}
+.warn p{margin:0;max-width:60ch}
+.entry{display:grid;grid-template-columns:minmax(150px,230px) 1fr;gap:10px 30px;padding:24px 0;border-top:1px solid var(--rust)}
+.entry:last-child{border-bottom:1px solid var(--rust)}
+.entry h3{margin:0;font-size:1.45rem;font-weight:400}
+.entry p{margin:0;color:var(--ash);max-width:56ch}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px}
+h3.f{margin:0 0 14px;font-size:1.45rem;font-weight:400;border-bottom:2px solid var(--blood);padding-bottom:8px}
+dl{margin:0}
+dl div{display:flex;gap:16px;justify-content:space-between;padding:7px 0;border-bottom:1px dotted #4a403a}
+dt{color:var(--ash)}
+dd{margin:0;text-align:right}
+.filed{margin:16px 0 0;color:var(--ash);font-size:.95rem}
+ol.steps{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;gap:14px}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:12px}
+ol.steps li::before{content:counter(s);color:var(--red);font-size:1.5rem;line-height:1.2}
+.cta{border-top:4px solid var(--blood);padding:44px 0 10px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta h2{margin:0;max-width:16ch}
+footer{padding:36px 0 56px;color:var(--ash);font-size:.9rem}
+footer .row{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:12px}
+@media (max-width:700px){.entry{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}h1{animation:none}}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#top">SURVIVALISTZ</a>
+      <div class="links">
+        <a href="#before">Before you play</a>
+        <a href="#install">Install</a>
+        <a href="https://github.com/glitchct/SurvivalistZ">GitHub</a>
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <div class="title-row">
+        <h1>Don't get bitten.</h1>
+        <aside class="notice"><strong>Notice</strong>SurvivalistZ leaves CurseForge on 12 November 2026 and continues on Modrinth.</aside>
+      </div>
+      <p class="lede">A zombie virus has spread across the world. SurvivalistZ is a Minecraft modpack with over 100 mods. Find a cure, and be careful who you trust.</p>
+      <p class="sig">Good luck. – <span class="redact">REDACTED</span></p>
+      <div class="btns">
+        <a class="btn solid" href="https://www.curseforge.com/minecraft/modpacks/survivalistz">Available on CurseForge</a>
+        <a class="btn soon" href="https://modrinth.com/modpack/survivalistz">Soon on Modrinth</a>
+        <a class="btn" href="https://github.com/glitchct/SurvivalistZ">View source on GitHub</a>
+      </div>
+    </header>
+
+    <section id="before">
+      <div class="hazard"></div>
+      <div class="warn">
+        <h3>Warning: this pack is heavy</h3>
+        <p>SurvivalistZ has over 100 mods. Give it at least 8–12 GB of RAM. If your computer has less than 16–32 GB in total, the author does not recommend playing it.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Survive. Or don't.</h2>
+      <div class="entry"><h3>Find a cure</h3><p>The virus is everywhere. Your goal is to find a cure for it.</p></div>
+      <div class="entry"><h3>Bring friends</h3><p>Go with your friends. Once you're infected, you don't have long until you become a zombie.</p></div>
+      <div class="entry"><h3>Trust no one</h3><p>Zombies aren't the only enemy. Your "friends" could turn on you. Survive, with friends or without.</p></div>
+    </section>
+
+    <section>
+      <div class="cols">
+        <div>
+          <h3 class="f">Details</h3>
+          <dl>
+            <div><dt>Game</dt><dd>Minecraft: Java 1.20.1</dd></div>
+            <div><dt>Loader</dt><dd>Forge</dd></div>
+            <div><dt>Mods</dt><dd>Over 100</dd></div>
+            <div><dt>Latest</dt><dd>v1.0.2 Hotfix, Aug 6, 2026</dd></div>
+            <div><dt>License</dt><dd>BSD-2-Clause</dd></div>
+          </dl>
+          <p class="filed">Filed under: Adventure and RPG, Combat / PvP, Exploration, Hardcore, Horror.</p>
+        </div>
+        <div id="install">
+          <h3 class="f">Install</h3>
+          <ol class="steps">
+            <li><span>Open the <a href="https://www.curseforge.com/minecraft/modpacks/survivalistz">CurseForge page</a> and install with the CurseForge app. After 12 November, use Modrinth.</span></li>
+            <li><span>In the pack's settings, set memory to at least 8–12 GB.</span></li>
+            <li><span>Launch it, grab your friends, and start looking for the cure.</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="cta">
+        <h2>The outbreak has started.</h2>
+        <a class="btn solid" href="https://discord.gg/cHE88ZtM8Z">Join the Discord</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="row">
+        <a href="https://www.curseforge.com/minecraft/modpacks/survivalistz">CurseForge</a>
+        <a href="https://modrinth.com/modpack/survivalistz">Modrinth</a>
+        <a href="https://github.com/glitchct/SurvivalistZ">GitHub</a>
+        <a href="https://github.com/glitchct/SurvivalistZ/issues">Report an issue</a>
+      </div>
+      Not an official Minecraft service. Not approved by or associated with Mojang or Microsoft. All rights reserved. GLITCHCT, 2026
+    </footer>
+  </div>
+</div>
+</body>
+</html>
