@@ -2,6 +2,9 @@
 
 # SurvivalistZ
 
+![Static Badge](https://img.shields.io/badge/Version-1.0.2--Hotfix-white?style=plastic&logo=Curseforge) ![Static Badge](https://img.shields.io/badge/Version-1.2-white?style=plastic&logo=modrinth) ![Static Badge](https://img.shields.io/badge/Build-Passing-green?style=plastic&logo=github)
+
+
 **Hello, Survivalist.**
                             
 A **zombie virus** broke out all over the World. Your goal is to **find a cure**.                     
